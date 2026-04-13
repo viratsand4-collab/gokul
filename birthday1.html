@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Message & Happy Birthday Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Comic Sans MS', 'Segoe Print', cursive, sans-serif;
+      background: linear-gradient(135deg, #f7f3ff, #e0f0ff);
+      color: #1a3d82;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      width: min(980px, 100%);
+      padding: 28px;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: #1845a1;
+      letter-spacing: 0.12em;
+      animation: float 3s ease-in-out infinite;
+      text-shadow: 0 0 18px rgba(29, 95, 211, 0.35);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .message-card,
+    .happy-card {
+      margin: 18px auto;
+      padding: 24px;
+      max-width: 840px;
+      border-radius: 22px;
+      border: 2px solid #b7d1ff;
+      background: rgba(245, 249, 255, 0.98);
+      box-shadow: 0 14px 32px rgba(23, 86, 165, 0.1);
+    }
+
+    .message-card p,
+    .happy-card p {
+      margin: 0 0 1rem;
+      line-height: 1.7;
+      font-size: 1.12rem;
+      color: #264179;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .button {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #3d78f0, #1c4cb8);
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 12px 24px rgba(28, 80, 184, 0.2);
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 30px rgba(28, 80, 184, 0.28);
+    }
+
+    .happy-image {
+      width: 100%;
+      max-width: 760px;
+      border-radius: 24px;
+      margin: 0 auto;
+      display: block;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 3px solid #d1deff;
+      box-shadow: 0 12px 24px rgba(23, 83, 157, 0.12);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Happy Birthday!</h1>
+
+    <div class="message-card">
+      <h2>Birthday Message</h2>
+      <p id="birthdayText">Click the button to see your special birthday wish.</p>
+      <div class="buttons">
+        <button class="button" onclick="showBirthdayMessage()">
+          Show Birthday Message
+        </button>
+        <a class="button" href="#happy-page">Go to Happy Birthday Page</a>
+      </div>
+    </div>
+
+    <div class="happy-card" id="happy-page">
+      <h2>Happy Birthday Page</h2>
+      <p>Wishing you a day full of smiles, love, and celebration!</p>
+      <img class="happy-image" src="index.html/images/main.jpg" alt="Happy Birthday Image" />
+      <p>
+        May your birthday be as amazing as you are. Enjoy every moment!
+      </p>
+      <div class="gallery">
+        <img src="index.html/images/img1.jpg" alt="Birthday Image 1" />
+        <img src="index.html/images/img2.jpg" alt="Birthday Image 2" />
+        <img src="index.html/images/img3.jpg" alt="Birthday Image 3" />
+        <img src="index.html/images/img4.jpg" alt="Birthday Image 4" />
+        <img src="index.html/images/img5.jpg" alt="Birthday Image 5" />
+        <img src="index.html/images/img6.jpg" alt="Birthday Image 6" />
+        <img src="index.html/images/img7.jpg" alt="Birthday Image 7" />
+        <img src="index.html/images/img8.jpg" alt="Birthday Image 8" />
+        <img src="index.html/images/img9.jpg" alt="Birthday Image 9" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showBirthdayMessage() {
+      const text = document.getElementById('birthdayText');
+      text.textContent = 
+        'Padida parama! Sandhiya maari poruppa irukka kathukko. Happy birthday!';
+    }
+  </script>
+</body>
+</html>

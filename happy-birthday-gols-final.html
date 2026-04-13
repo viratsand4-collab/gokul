@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Gallery & Video</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #fef7db, #d9eaff);
+      font-family: 'Comic Sans MS', 'Segoe Print', cursive, sans-serif;
+      color: #2d4f86;
+    }
+    .page {
+      width: 100%;
+      max-width: 1080px;
+      padding: 24px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .images-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+    .images-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+      border: 4px solid #b3d1ff;
+    }
+    .video-wrapper {
+      margin: 28px 0;
+    }
+    video {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 24px;
+      box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+      border: 5px solid #7fa8ff;
+    }
+    .nav-button {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, #4c78f1, #1c4cb8);
+      box-shadow: 0 14px 28px rgba(28, 76, 184, 0.25);
+      transition: transform 0.2s ease;
+    }
+    .nav-button:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Birthday Gallery</h1>
+    <p>A final set of celebration images plus your birthday video:</p>
+    <div class="images-grid">
+      <img src="./index.html/images/img4.jpg" alt="Birthday image 4">
+      <img src="./index.html/images/img5.jpg" alt="Birthday image 5">
+      <img src="./index.html/images/img6.jpg" alt="Birthday image 6">
+      <img src="./index.html/images/img7.jpg" alt="Birthday image 7">
+      <img src="./index.html/images/img8.jpg" alt="Birthday image 8">
+      <img src="./index.html/images/img9.jpg" alt="Birthday image 9">
+    </div>
+    <div class="video-wrapper">
+      <video controls>
+        <source src="./index.html/videos/birthday.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <a class="nav-button" href="happy-birthday-gols.html">Back to message</a>
+  </div>
+</body>
+</html>
